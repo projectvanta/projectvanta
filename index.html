@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Vanta | Protocol</title>
+    <style>
+        :root {
+            --bg: #02040a;
+            --card-bg: #0d1117;
+            --primary: #ffffff;
+            --accent: #00d2ff; /* Neon Light Blue */
+            --dim: #8b949e;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--primary);
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Floating Animation */
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .bounce {
+            display: inline-block;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 12vw, 6rem);
+            font-weight: 800;
+            letter-spacing: -3px;
+            margin: 0;
+            filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.4));
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* The Shining Line Connection */
+        .roadmap-container {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 50px;
+        }
+
+        /* The static line */
+        .roadmap-container::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* The Animated Shining Light Line */
+        .shining-line {
+            position: absolute;
+            left: 18px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+            background-size: 100% 200px;
+            animation: flow 3s linear infinite;
+        }
+
+        @keyframes flow {
+            0% { background-position: 0 -200px; }
+            100% { background-position: 0 100%; }
+        }
+
+        section { margin-bottom: 100px; }
+
+        h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; }
+
+        /* Roadmap Cards */
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            transition: 0.3s;
+        }
+
+        /* Dot on the line for each card */
+        .card::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 40px;
+            width: 16px;
+            height: 16px;
+            background: var(--bg);
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateX(10px);
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.1);
+        }
+
+        .card h3 { margin: 0 0 10px 0; color: var(--accent); }
+        .card p { margin: 0; color: var(--dim); font-size: 1.1rem; }
+
+        /* Social Section */
+        .social-box {
+            background: linear-gradient(to bottom, #0d1117, #02040a);
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 30px;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            margin-bottom: 50px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-tg { background: var(--accent); color: #000; }
+        .btn-x { border: 1px solid var(--accent); color: var(--accent); }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(0, 210, 255, 0.4); }
+
+        footer { text-align: center; padding: 40px; color: var(--dim); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="bounce">Project Vanta</h1>
+        <p style="color: var(--accent); font-weight: bold; letter-spacing: 3px;">SYSTEM INITIALIZED</p>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2 class="bounce">The Vision</h2>
+            <p>Project Vanta is a digital frontier where the narrative is the protocol. We are building a world that lives and breathes through community interaction. Connect to the stream.</p>
+        </section>
+
+        <h2 class="bounce">Roadmap</h2>
+        <div class="roadmap-container">
+            <div class="shining-line"></div>
+            
+            <div class="card">
+                <h3>Phase 01: Submerge</h3>
+                <p>Establishing core infrastructure and onboarding the first wave of the Vanta community.</p>
+            </div>
+
+            <div class="card">
+                <h3>Phase 02: Resonate</h3>
+                <p>Opening interactive narrative branches. Official website deployment and system expansion.</p>
+            </div>
+
+            <div class="card">
+                <h3>Phase 03: Ascend</h3>
+                <p>Full-scale ecosystem integration. Strategic Web3 partnerships and global narrative dominance.</p>
+            </div>
+        </div>
+
+        <section class="social-box">
+            <h2 class="bounce">Connect</h2>
+            <p>Access the protocol via our official channels.</p>
+            <div class="btn-group">
+                <a href="https://t.me/+NrxojzBm4Yg0NzQ5" target="_blank" class="btn btn-tg">Telegram</a>
+                <a href="https://x.com/thevantaproject?s=21" target="_blank" class="btn btn-x">Follow X</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 PROJECT VANTA | SYSTEM ENCRYPTED
+    </footer>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
